@@ -1,0 +1,40 @@
+├── docker-compose.yml
+├── .gitignore
+├── .env
+├── k8s
+│   ├── product-service
+│   │   ├── deployment.yml
+│   │   └── service.yml
+│   ├── search-service
+│   │   ├── deployment.yml
+│   │   └── service.yml
+│   └── cart-service
+│       ├── deployment.yml
+│       └── service.yml
+├── src
+│   ├── Controller
+│   │   ├── ProductController.php
+│   │   ├── SearchController.php
+│   │   └── CartController.php
+│   ├── Entity
+│   │   ├── Product.php
+│   │   ├── Search.php
+│   │   └── Cart.php
+│   ├── Repository
+│   │   ├── ProductRepository.php
+│   │   ├── SearchRepository.php
+│   │   └── CartRepository.php
+│   ├── Microservices
+│   │   ├── Product
+│   │   ├── Search
+│   │   └── Cart
+│   ├── Migrations
+│   └── Kernel.php
+├── templates
+├── tests
+├── composer.json
+├── bin
+├── config
+├── public
+├── vendor
+└── var

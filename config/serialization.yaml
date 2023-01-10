@@ -1,0 +1,16 @@
+App\Entity\Product:
+    exclusion_policy: ALL
+    groups: ['product']
+    properties:
+        id:
+            expose: true
+        name:
+            expose: true
+        price:
+            expose: true
+        description:
+            expose: true
+
+
+
+

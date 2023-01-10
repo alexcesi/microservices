@@ -1,0 +1,36 @@
+version: "3"
+services:
+  product:
+    container_name: productContainer
+    build:
+      context: ./src/Microservices/Product
+    ports:
+      - "8080:80"
+    depends_on:
+      - database
+  search:
+    container_name: searchContainer
+    build:
+      context: ./src/Microservices/Search
+    ports:
+      - "8081:80"
+    depends_on:
+      - database
+  cart:
+    container_name: cartContainer
+    build:
+      context: ./src/Microservices/Cart
+    ports:
+      - "8082:80"
+    depends_on:
+      - database
+  database:
+    container_name: database
+    image: mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    ports:
+      - "3307:3306"
+
+      
